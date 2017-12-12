@@ -1,0 +1,14 @@
+//Kenny Lin
+//CS1 pd 8
+//HW12 -- stAtistically sPeaking
+//2017-10-5
+
+public  class Stats {
+    public static void main (String[] args){
+	public static int mean (int a, int b){
+	    int total = (int a += int b);
+	    int mean = int total / int 2 ;
+	    return mean;
+	}
+    }
+}

@@ -1,0 +1,6 @@
+public class BigSib2 {
+    private String helloMsg;
+    public void setHelloMsg(String newMsg) {
+	
+    }
+}

@@ -1,0 +1,56 @@
+//Kenny Lin
+//APCS pd7
+//HW #20: For the Lulz Love of Strings
+//2017-10-19
+
+public class Foresrever {
+    //main method
+    public static void main (String[] args) {
+	System.out.println("=======================fenceF test==========================");
+	System.out.print(fenceF(1));
+	System.out.println(": Should return |");
+	System.out.print(fenceF(2));
+	System.out.println(": Should return |--|");
+	System.out.print(fenceF(3));
+	System.out.println(": Should return |--|--|");
+	System.out.print(fenceF(-1));
+	System.out.println(": Should return |");
+	
+	System.out.println("=======================reverseF test==========================");
+	System.out.print(reverseF("stressed"));
+	System.out.println(": Should return desserts");
+	System.out.print(reverseF("APCS"));
+	System.out.println(": Should return SCPA");
+	System.out.print(reverseF("Mr. Brown-Mykolyk"));
+	System.out.println(": Should return kylokyM-nworB .rM");
+	  
+	System.out.println("=======================reserveR test==========================");
+	//resused same test cases
+	System.out.print(reverseR("stressed"));
+	System.out.println(": Should return desserts");
+	System.out.print(reverseR("APCS"));
+	System.out.println(": Should return SCPA");
+	System.out.print(reverseR("Mr. Brown-Mykolyk"));
+	System.out.println(": Should return kylokyM-nworB .rM");			 
+    }
+    public static String fenceF (int posts){ //returns a String fence (for loop)
+	String fence = "|";
+	for (int numPosts = posts; numPosts > 1; numPosts --) {
+	    fence += "--|"; //fence gets bigger for every post
+	}
+	return fence;
+    }
+    public static String reverseF (String s){ //returns s with its letters reversed (for loop)
+        String reverse = "";
+	//int length = s.length();
+	for (int counter = s.length(); counter > 0; counter --) {
+	    reverse += s.substring(counter - 1, counter); //realized that the range had to be two diff numbers
+	}
+	return reverse;
+    }
+    public static String reverseR (String s) { //returns reversed s (recursion)
+	if (s.length() < 1) { //base case
+	    return s;
+	} return reverseR(s.substring(1)) + s.substring(0,1); //deletes original string while slowly building reverse
+    }
+}

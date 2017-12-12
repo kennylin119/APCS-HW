@@ -1,0 +1,72 @@
+//Kenny Lin
+//APCS pd 8
+//HW #15: Wayne's World
+//2017--10--11
+
+
+public class Coin {
+    public double value;
+    public String upFace;
+    public String name;
+    public int flipCtr;
+    public int headsCtr;
+    public int tailsCtr;
+    public static double bias;
+    
+    //default contructor
+    public Coin(){
+	name = "null";
+        upFace = "heads";
+    }
+
+    //first overloaded constructor
+    public Coin(String Dem){
+	this();
+	name = Dem;
+    }
+
+    //second overloaded constructor
+    public Coin(String Dem, String curFace){
+	this(Dem);
+	upFace = curFace;
+    }
+    
+    //flip method
+    public String flip(){
+	//Math.random generates random numbers betweeen 0-1 automatically
+	bias = Math.random();
+	if (bias > .5) {
+	    upFace = "heads";
+	    headsCtr += 1;
+	    System
+	} else if (bias < .5) {
+	    upFace = "tails";
+	    tailsCtr += 1;
+	}
+       	flipCtr += 1;
+	return upFace;
+    }
+
+    //toString method
+    //returns a coin¡¯s denomination and current face
+    public String toString(){
+	String retStr = name;
+	retStr += " -- ";
+	retStr += upFace;
+	return retStr;
+    }
+
+    //compares this Coin to another. Returns true if they show the same face, false otherwise
+    public boolean equals(Coin other){
+	return upFace == other.upFace;
+    }
+
+    //assigns a Coin's monetary value to its name
+    public  void assignValue(){
+	if (name == "penny") value = 0.01;
+	if (name == "nickel") value = 0.05;
+	if (name == "dime") value = 0.10;
+	if (name == "quarter") value = 0.25;
+	if (name == "dollar") value = 1.0;   
+    }
+}

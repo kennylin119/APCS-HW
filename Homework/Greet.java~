@@ -1,0 +1,20 @@
+import java.util.Random;
+
+public class Greet{
+    String nameOne = "Foo";
+    String nameTwo = "Moo";
+    String nameThree = "Koo";
+    public static void getString(String[] args) {
+	 Random rand = new Random();
+	 int integer = rand.nextInt(3);
+	 }
+     public void main(String[] args) {
+	 if (integer == 0 && true){
+	     System.out.println("Why, hello there," + nameOne + " How do you do?");	 }
+	 if (integer == 1 && true) {
+	     System.out.println("Why, hello there," + nameTwo + " How do you do?");
+	 } else {
+	     System.out.println("Why, hello there," + nameThree + " How do you do?");
+	 }
+     }
+}
